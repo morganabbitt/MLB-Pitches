@@ -1,0 +1,5 @@
+#ignore data folder
+/data
+
+#ignore ipynb's
+*.ipynb_checkpoint
