@@ -1,5 +1,11 @@
-#ignore data folder
+#Ignore ds store
+.DS_Store
+
+#Ignore data folder
 /data
 
-#ignore ipynb's
-*.ipynb_checkpoint
+#Ignore csv's
+*.csv
+
+#Ignore ipynbs
+*.ipynb_checkpoints
