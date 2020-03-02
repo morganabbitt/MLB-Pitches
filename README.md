@@ -46,8 +46,11 @@ This Project involved a lot of EDA. This dataset was provided on Kaggle and cont
 |`pitches.csv`| speed, location, live game stats, etc. for every pitch thrown|2,867,154 |40|
 |`ejections.csv`| name, time, game, etc. of every ejection|761 |10|
 
+
 <a name="model"></a>
 ## 4. Modeling
+
+I was extremely excited about the 2.8 million pitches I would be able to work with. This excitement slowly turned to difficulty as I ran into problems using this amount of data. I wanted to initially build a model that could classify the next pitch that could be throw but due to the time constraints of this project it was not achieveable. The next best alternative was to build a model for each pitcher and classify how "predictable" they are using the score of that model. 
 
 <a name="conclusions"></a>
 ## 5. Conclusions
