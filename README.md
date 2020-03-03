@@ -59,7 +59,7 @@ The first step was to run an out of the box Decision Tree Classifier on each pit
 After lots of eda and cleaning I was able to get a vector for each pitcher that describes the disribution of pitches that they throw. For example here is what Justin Verlander's vector would look like. 
 
 |name|AB|CH|CU|EP|FA|FC|FF|FO|FS|FT|IN|KC|KN|SC|SI|SL|
-|----|------|-----|-----|-----|-----|-----|-----|-----|------|-----|-----|----|-----|----|----|
+|----|------|-----|-----|-----|-----|-----|-----|-----|------|-----|-----|----|-----|----|----|---|
 |Justin Verlander|0.0|0.055|0.154|0.0|0.0|0.002|0.587|0.0|0.0|0.001|0.0|0.0|0.0|0.0|0.0|0.199|
 
 The next step was to use a dimensionality reducation technique called t-distributed Stochastic Neighbor Embedding. This technique took all of our pitchers and reduced the 16 different pitches into 2 dimensional data. Here is what the tsne of our 500 pitchers looks like:
@@ -118,6 +118,16 @@ Although we can make statements about each pitcher specifically and how predicta
 A pitcher that throws every pitch at the same probability, will be considered less predictable.
 
 With this information we can educate batters with tendencies for each pitcher. By first categorizing them based on their predicatablilty, and then observing their pitching tendencies. 
+
+There are 3 different types of pitchers that we have found.
+
+Pitchers that throw a lot of Four-seam Fast balls.
+Pitchers that throw a lot of Sinkers.
+And Pitchers that throw a wide distribution of pitches. 
+
+Based on the type of category a pitcher falls in, we can educate batters about that pitchers tendencies and what they should expect.
+
+
 
 <a name="contact"></a>
 ## 6. Contact Information
