@@ -49,6 +49,56 @@ This Project involved a lot of EDA. This dataset was provided on Kaggle and cont
 <a name="model"></a>
 ## 4. Modeling
 
+The interpretation of these pitchers predictability came from two different types of modeling, Supervised Learning, and Unsupervised learning. 
+
+#### **Supervised Learning**
+The first step was to run an out of the box Decision Tree Classifier on each pitcher and all of their pitches to predict the pitch type in each scenario. The Decision Tree Classification model was chosen because it performed the best in the shortest amount of time. 
+
+#### **Unsupervised Learning**
+After lots of eda and cleaning I was able to get a vector for each pitcher that describes the disribution of pitches that they throw. For example here is what Justin Verlander's vector would look like. 
+
+|name|AB|CH|CU|EP|FA|FC|FF|FO|FS|FT|IN|KC|KN|SC|SI|SL|
+|----|------|-----|-----|-----|-----|-----|-----|-----|------|-----|-----|----|-----|----|----|
+|Justin Verlander|0.0|0.055|0.154|0.0|0.0|0.002|0.587|0.0|0.0|0.001|0.0|0.0|0.0|0.0|0.0|0.199|
+
+The next step was to use a dimensionality reducation technique called t-distributed Stochastic Neighbor Embedding. This technique took all of our pitchers and reduced the 16 different pitches into 2 dimensional data. Here is what the tsne of our 500 pitchers looks like:
+
+<p align="center">
+<img src="Graphics/TSNE_pitcher.png">
+</p>
+
+Next I used Kmeans Clustering with 3 clusters to try to separate some of these picthers. 
+
+<p align="center">
+<img src="Graphics/tsne_clustered_pitcers.png">
+</p>
+
+But what do these clusters really mean? Let's take a look. 
+
+<p align="center">
+<img src="Graphics/pitcher_historgam_bycluster.png">
+</p>
+
+This plot contains histograms of all of the pitchers within each cluster. As we can see they all have different "predictability" means. Cluster 0 has the highest mean with a score of 0.48, and then Cluster 1 with a mean of 0.44 and Cluster 2 with a mean of 0.37. 
+
+The next thing I checked was to see what different clusters represented. 
+
+<p align="center">
+<img src="Graphics/pitch_distribution_centroid_pitchers.png">
+</p>
+
+From this plot we can see all of the pitches along the x axis, and each bar corresponding to the percentage that that pitch comes up in each cluster. This is extrememly interesting because now we can visualize what types of pitchers are in each cluster. For example Cluster 0 contains our Four-Seam Fastball Pitchers, and Cluster 1 contains our sinker pitchers. 
+
+How does this all relate to the predictablilty? 
+
+<p align="center">
+<img src="Graphics/accuracy_by_cluster.png">
+</p>
+
+If we look at each of our pitchers predicatability and their cluster, we can see that pitchers in Cluster 2 and Cluster 1 are much less predictable than pitchers in Cluster 0. 
+
+
+
 <a name="conclusions"></a>
 ## 5. Conclusions
 
