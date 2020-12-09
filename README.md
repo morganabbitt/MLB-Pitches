@@ -132,4 +132,7 @@ Based on the type of category a pitcher falls in, we can educate batters about t
 <a name="contact"></a>
 ## 6. Contact Information
 
+- [LinkedIn](https://www.linkedin.com/in/morganabbitt/)
+- [Email](morganabbitt@yahoo.com)
+- [My website](www.morganabbitt.com)
 
