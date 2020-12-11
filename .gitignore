@@ -9,3 +9,7 @@
 
 #Ignore ipynbs
 *.ipynb_checkpoints
+
+#Ignore docx file
+*.doc
+*.docx
